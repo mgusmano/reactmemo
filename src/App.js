@@ -1,18 +1,13 @@
 import React from 'react';
+import { GlobalStateProvider } from './globalstate/GlobalStateProvider';
+import Absolute from './absolute/Absolute';
 
-function App() {
+const App = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <GlobalStateProvider>
+      <Absolute/>
+    </GlobalStateProvider>
+  )
 }
 
-export default App;
+export default App
