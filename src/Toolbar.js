@@ -28,26 +28,30 @@ const Toolbar = ({eventFromWidget}) => {
     eventFromWidget(r);
   };
 
-  const onChangeData = (e) => {
-    console.log('onChangeData')
-    // var r = {
-    //   "type": CHANGE_WIDGET_DATA,
-    //   "payload": {
-    //     id: 1,
-    //     data: [
-    //       {id: '1', firstname: 'Nick', lastname: Date.now().toString()},
-    //       {id: '2', firstname: 'Andy', lastname: Date.now().toString()}
-    //     ]
-    //   }
-    // }
-
+  const onChangeDataDifferent = (e) => {
+    console.log('onChangeDataDifferent')
     var r = {
       "type": CHANGE_WIDGET_DATA,
       "payload": {
         id: 1,
         data: [
-          {id: '1', firstname: 'Nick', lastname: 'G'},
-          {id: '2', firstname: 'Andy', lastname: 'G'}
+          {id: '1', firstname: 'Nick', lastname: Date.now().toString()},
+          {id: '2', firstname: 'Andy', lastname: Date.now().toString()}
+        ]
+      }
+    }
+    eventFromWidget(r);
+  };
+
+  const onChangeDataSame = (e) => {
+    console.log('onChangeDataSame')
+    var r = {
+      "type": CHANGE_WIDGET_DATA,
+      "payload": {
+        id: 1,
+        data: [
+          {id: '1', firstname: 'Nick', lastname: 'Gusmano'},
+          {id: '2', firstname: 'Andy', lastname: 'Gusmano'}
         ]
       }
     }
@@ -60,7 +64,8 @@ const Toolbar = ({eventFromWidget}) => {
       <div style={{padding:'5px 0 5px 0',display:'flex',flexDirection:'row'}}>
         <button onClick={onChangeTitleDifferent} style={{width:'180px',margin:'0 0 0 10px',fontSize:'11px',background:'gray',color:'white'}} >Change Title Different</button>
         <button onClick={onChangeTitleSame} style={{width:'180px',margin:'0 0 0 10px',fontSize:'11px',background:'gray',color:'white'}} >Change Title Same</button>
-        <button onClick={onChangeData} style={{width:'180px',margin:'0 0 0 10px',fontSize:'11px',background:'gray',color:'white'}} >Change Data</button>
+        <button onClick={onChangeDataDifferent} style={{width:'180px',margin:'0 0 0 10px',fontSize:'11px',background:'gray',color:'white'}} >Change Data Different</button>
+        <button onClick={onChangeDataSame} style={{width:'180px',margin:'0 0 0 10px',fontSize:'11px',background:'gray',color:'white'}} >Change Data Same</button>
       </div>
     </div>
   );

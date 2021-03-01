@@ -5,16 +5,11 @@ import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 import './Comparative.css';
 
-import SenchaGrid, { Column } from '@sencha/sencha-grid';
-import '@sencha/sencha-grid/dist/themes/material.css';
-import 'material-design-icons/iconfont/material-icons.css';
-
 const ComparativeRoot = ({widgetData, eventFromWidget}) => {
   console.log(widgetData)
 
   return (
     <div style={{display:'flex',height:'100%',overflow:'auto',flexDirection:'column'}}>
-
         <div className="ag-theme-alpine" style={{ height: '100%', width: '100%' }}>
             <AgGridReact
                 headerHeight={20}
@@ -26,20 +21,6 @@ const ComparativeRoot = ({widgetData, eventFromWidget}) => {
               <AgGridColumn field="lastname" flex={1}></AgGridColumn>
             </AgGridReact>
         </div>
-
-
-
-      {/* <div style={{flex:'1',border:'1px solid lightgray' }}>
-        <SenchaGrid
-          height='100%'
-          data={widgetData.data}
-        >
-          <Column dataIndex="id" text="ID" width="20px" />
-          <Column dataIndex="firstname" text="First" width="60px" />
-          <Column dataIndex="lastname" text="Last" flex="1" />
-        </SenchaGrid>
-      </div> */}
-
     </div>
   )
 }
