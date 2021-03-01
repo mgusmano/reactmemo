@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": " ~4.11.3",
-    "@sencha/sencha-grid": "^1.0.0-alpha.22",
+    "@material-ui/icons": " ~4.11.2",
     "ag-grid-community": "^25.1.0",
     "ag-grid-react": "^25.1.0",
     "flex-splitter-directive": "~0.1.2",

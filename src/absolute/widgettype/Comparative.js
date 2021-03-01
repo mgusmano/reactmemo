@@ -17,7 +17,7 @@ const ComparativeRoot = ({widgetData, eventFromWidget}) => {
                 rowData={widgetData.data}
             >
               <AgGridColumn field="id" width="50"></AgGridColumn>
-              <AgGridColumn field="firstname" flex={1}></AgGridColumn>
+              <AgGridColumn field="firstname" flex={1} sortable={true} ></AgGridColumn>
               <AgGridColumn field="lastname" flex={1}></AgGridColumn>
             </AgGridReact>
         </div>
