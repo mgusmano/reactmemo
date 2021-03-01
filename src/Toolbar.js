@@ -30,13 +30,24 @@ const Toolbar = ({eventFromWidget}) => {
 
   const onChangeData = (e) => {
     console.log('onChangeData')
+    // var r = {
+    //   "type": CHANGE_WIDGET_DATA,
+    //   "payload": {
+    //     id: 1,
+    //     data: [
+    //       {id: '1', firstname: 'Nick', lastname: Date.now().toString()},
+    //       {id: '2', firstname: 'Andy', lastname: Date.now().toString()}
+    //     ]
+    //   }
+    // }
+
     var r = {
       "type": CHANGE_WIDGET_DATA,
       "payload": {
         id: 1,
         data: [
-          {id: '1', firstname: 'Nick', lastname: Date.now().toString()},
-          {id: '2', firstname: 'Andy', lastname: Date.now().toString()}
+          {id: '1', firstname: 'Nick', lastname: 'G'},
+          {id: '2', firstname: 'Andy', lastname: 'G'}
         ]
       }
     }

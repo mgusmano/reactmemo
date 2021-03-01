@@ -2256,6 +2256,18 @@
     "loader-utils" "^2.0.0"
     "regex-parser" "^2.2.11"
 
+"ag-grid-community@^25.1.0", "ag-grid-community@~25.1.0":
+  "integrity" "sha512-sKJp6SZG8J50OlOeECtrLFSp/iwdx1mcG0+BmIkHsXmWoyXv5ZaTJyVg1/hMk6s3JVTm1ipg6LepbTaigWEL2A=="
+  "resolved" "https://registry.npmjs.org/ag-grid-community/-/ag-grid-community-25.1.0.tgz"
+  "version" "25.1.0"
+
+"ag-grid-react@^25.1.0":
+  "integrity" "sha512-9xboQWDde2oANitsI/RbsS/rMFVLzXLGyteEBjxSyKGrGDOwAK6XHgvfbGSBL2yWVrYDUD5HRHCdfNejO4FPGA=="
+  "resolved" "https://registry.npmjs.org/ag-grid-react/-/ag-grid-react-25.1.0.tgz"
+  "version" "25.1.0"
+  dependencies:
+    "prop-types" "^15.6.2"
+
 "aggregate-error@^3.0.0":
   "integrity" "sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA=="
   "resolved" "https://registry.yarnpkg.com/aggregate-error/-/aggregate-error-3.1.0.tgz"
@@ -9374,7 +9386,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@^0.14.0 || ^15.0.0 || ^16 || ^17", "react-dom@^16.8.0 || ^17.0.0", "react-dom@^16.8.3", "react-dom@^17.0.1", "react-dom@>=16.6.0":
+"react-dom@^0.14.0 || ^15.0.0 || ^16 || ^17", "react-dom@^16.3.0 || ^17.0.0", "react-dom@^16.8.0 || ^17.0.0", "react-dom@^16.8.3", "react-dom@^17.0.1", "react-dom@>=16.6.0":
   "integrity" "sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug=="
   "resolved" "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.1.tgz"
   "version" "17.0.1"
@@ -9508,7 +9520,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.8.3", "react@^17.0.1", "react@>= 16", "react@>=16.6.0", "react@17.0.1":
+"react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^16.3.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.3", "react@^17.0.1", "react@>= 16", "react@>=16.6.0", "react@17.0.1":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz"
   "version" "17.0.1"

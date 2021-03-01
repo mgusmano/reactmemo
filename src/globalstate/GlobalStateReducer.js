@@ -1,5 +1,6 @@
 import produce from 'immer'
 import { RESIZE_WIDGET, CHANGE_WIDGET, CHANGE_WIDGET_TITLE, CHANGE_WIDGET_DATA, LOAD_WIDGETS } from './GlobalStateTypes';
+import _ from 'lodash';
 
 export const GlobalStateReducer = (state, action) => {
   const { payload } = action;
@@ -28,8 +29,17 @@ export const GlobalStateReducer = (state, action) => {
         var index = draft.widgets.map(item => item.id).indexOf(payload.id);
         if (index !== -1) {
           console.log('index found:',index);
-          draft.widgets[index].widgetData.data = payload.data;
-          draft.widgets[index].properties.timestamp = Date.now();
+          var a = state.widgets[index].widgetData.data
+          var b = payload.data
+          var res = _.isEqual(a, b)
+          if (res === false) {
+            console.log('data is different, index: ',index);
+            draft.widgets[index].widgetData.data = payload.data;
+            draft.widgets[index].properties.timestamp = Date.now();
+          }
+          else {
+            console.log('data is NOT different, index: ',index);
+          }
         }
       })
 

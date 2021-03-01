@@ -1,0 +1,9 @@
+div.ag-theme-alpine div.ag-row {
+  font-size: 10px !important;
+}
+
+.ag-row .ag-cell {
+  display: flex;
+  xjustify-content: center; /* align horizontal */
+  align-items: center;
+}
