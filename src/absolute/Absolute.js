@@ -8,7 +8,7 @@ const Absolute = () => {
 
   useEffect(() => {
     console.log('useEffect: call GlobalContext.loadWidgets()')
-    GlobalContext.loadWidgets()
+    GlobalContext.loadWidgets(window.widgets)
   }, []);
 
   const eventFromWidget = (event) => {

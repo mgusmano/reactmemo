@@ -21,7 +21,7 @@ const WidgetRoot = ({id, properties, widgetData, eventFromWidget}) => {
   var Specific = <div> {properties.type} </div>
   switch (properties.type) {
     case 'comparative':
-      Specific = <Comparative id={id} widgetData={widgetData} eventFromWidget={eventFromWidget}/>;
+      Specific = <Comparative id={id} mode={properties.mode} widgetData={widgetData} eventFromWidget={eventFromWidget}/>;
       break;
     default:
       break;

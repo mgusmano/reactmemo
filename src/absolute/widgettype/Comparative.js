@@ -4,22 +4,28 @@ import { AgGridReact, AgGridColumn } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 import './Comparative.css';
+import Column from './Column';
 
-const ComparativeRoot = ({widgetData, eventFromWidget}) => {
+const ComparativeRoot = ({mode, widgetData, eventFromWidget}) => {
   console.log(widgetData)
 
   return (
     <div style={{display:'flex',height:'100%',overflow:'auto',flexDirection:'column'}}>
         <div className="ag-theme-alpine" style={{ height: '100%', width: '100%' }}>
-            <AgGridReact
-                headerHeight={20}
-                rowHeight={20}
-                rowData={widgetData.data}
-            >
-              <AgGridColumn field="id" width="50"></AgGridColumn>
-              <AgGridColumn field="firstname" flex={1} sortable={true} ></AgGridColumn>
-              <AgGridColumn field="lastname" flex={1}></AgGridColumn>
-            </AgGridReact>
+          {mode === 'chart' &&
+          <Column />
+          }
+          {mode === 'grid' &&
+          <AgGridReact
+              headerHeight={20}
+              rowHeight={20}
+              rowData={widgetData.data}
+          >
+            <AgGridColumn field="id" width="50"></AgGridColumn>
+            <AgGridColumn field="firstname" flex={1} sortable={true} ></AgGridColumn>
+            <AgGridColumn field="lastname" flex={1}></AgGridColumn>
+          </AgGridReact>
+          }
         </div>
     </div>
   )

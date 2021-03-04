@@ -2,6 +2,7 @@ import React, { createContext, useReducer, useContext } from 'react';
 import { GlobalStateReducer } from './GlobalStateReducer';
 import { RESIZE_WIDGET, ADD_WIDGET, CHANGE_WIDGET, CHANGE_WIDGET_TITLE, CHANGE_WIDGET_DATA, LOAD_WIDGETS } from './GlobalStateTypes';
 import '../data/widgets'
+import '../data/widgets2'
 
 const GlobalContext = createContext();
 
@@ -15,6 +16,17 @@ export const GlobalStateProvider = (props) => {
     widgets: null,
   }
   const[state, dispatch] = useReducer(GlobalStateReducer, initialState);
+
+  const loadWidgets = (payload) => {
+    console.log('loadWidgets')
+    dispatch({type: LOAD_WIDGETS, payload: payload});
+    //dispatch(payload);
+
+    // var event = {type: ADD_WIDGET, payload: payload}
+    // console.log(event)
+    // dispatch(event);
+  }
+
 
   const eventFromWidgetDispatch = (what) => {
     //var event = {type: CHANGE_WIDGET_TITLE, payload: payload}
@@ -59,15 +71,7 @@ export const GlobalStateProvider = (props) => {
     dispatch(event);
   }
 
-  const loadWidgets = (payload) => {
-    console.log('loadWidgets')
-    dispatch({type: LOAD_WIDGETS, payload: window.widgets});
-    //dispatch(payload);
 
-    // var event = {type: ADD_WIDGET, payload: payload}
-    // console.log(event)
-    // dispatch(event);
-  }
 
 
   const changeWidget = (payload) => {
