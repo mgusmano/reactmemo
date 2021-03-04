@@ -7,7 +7,7 @@ export const GlobalStateReducer = (state, action) => {
   switch (action.type) {
 
     case LOAD_WIDGETS:
-      console.log('dispatch LOAD_WIDGETS',payload)
+      console.log('\ndispatch LOAD_WIDGETS',payload)
       return produce(state, draft => {
         draft.highWidgetId = payload.length
         draft.widgets = payload

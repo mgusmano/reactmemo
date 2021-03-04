@@ -7,7 +7,7 @@ import './Comparative.css';
 import Column from './Column';
 
 const ComparativeRoot = ({mode, widgetData, eventFromWidget}) => {
-  console.log(widgetData)
+  //console.log(widgetData)
 
   return (
     <div style={{display:'flex',height:'100%',overflow:'auto',flexDirection:'column'}}>
@@ -21,7 +21,7 @@ const ComparativeRoot = ({mode, widgetData, eventFromWidget}) => {
               rowHeight={20}
               rowData={widgetData.data}
           >
-            <AgGridColumn field="id" width="50"></AgGridColumn>
+            <AgGridColumn field="id" width={50}></AgGridColumn>
             <AgGridColumn field="firstname" flex={1} sortable={true} ></AgGridColumn>
             <AgGridColumn field="lastname" flex={1}></AgGridColumn>
           </AgGridReact>
@@ -33,8 +33,8 @@ const ComparativeRoot = ({mode, widgetData, eventFromWidget}) => {
 
 function checkIfComparativeChanged(prevWidget, nextWidget) {
   console.log('checkIfComparativeChanged: ' + prevWidget.id)
-  console.log('prev',prevWidget.widgetData)
-  console.log('next', nextWidget.widgetData)
+  //console.log('prev',prevWidget.widgetData)
+  //console.log('next', nextWidget.widgetData)
   var same = prevWidget.widgetData === nextWidget.widgetData
   if (same === true) {
     console.log(`comparative ${prevWidget.id} will NOT redraw`)

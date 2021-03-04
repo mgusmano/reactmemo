@@ -19,7 +19,7 @@ export const GlobalStateProvider = (props) => {
   const[state, dispatch] = useReducer(GlobalStateReducer, initialState);
 
   const loadWidgets = (payload) => {
-    console.log('loadWidgets')
+    //console.log('loadWidgets')
     dispatch({type: LOAD_WIDGETS, payload: payload});
     //dispatch(payload);
 

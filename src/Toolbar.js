@@ -5,7 +5,7 @@ import './Toolbar.css'
 const Toolbar = ({eventFromWidget}) => {
 
   const onLoadWidgetsSmallDif = (e) => {
-    console.log('onLoadWidgetsSmallDif')
+    //console.log('onLoadWidgetsSmallDif')
     var r = {
       "type": LOAD_WIDGETS,
       "payload": window.widgetssmalldif
@@ -14,7 +14,7 @@ const Toolbar = ({eventFromWidget}) => {
   };
 
   const onLoadWidgets = (e) => {
-    console.log('onLoadWidgets')
+    //console.log('onLoadWidgets')
     var r = {
       "type": LOAD_WIDGETS,
       "payload": window.widgets
@@ -23,7 +23,7 @@ const Toolbar = ({eventFromWidget}) => {
   };
 
   const onLoadWidgets2 = (e) => {
-    console.log('onLoadWidgets2')
+    //console.log('onLoadWidgets2')
     var r = {
       "type": LOAD_WIDGETS,
       "payload": window.widgets2
@@ -32,7 +32,7 @@ const Toolbar = ({eventFromWidget}) => {
   };
 
   const onChangeTitleDifferent = (e) => {
-    console.log('onChangeTitleDifferent')
+    //console.log('onChangeTitleDifferent')
     var r = {
       "type": CHANGE_WIDGET_TITLE,
       "payload": {
@@ -44,7 +44,7 @@ const Toolbar = ({eventFromWidget}) => {
   };
 
   const onChangeTitleSame = (e) => {
-    console.log('onChangeTitleSame')
+    //console.log('onChangeTitleSame')
     var r = {
       "type": CHANGE_WIDGET_TITLE,
       "payload": {
@@ -56,7 +56,7 @@ const Toolbar = ({eventFromWidget}) => {
   };
 
   const onChangeDataDifferent = (e) => {
-    console.log('onChangeDataDifferent')
+    //console.log('onChangeDataDifferent')
     var r = {
       "type": CHANGE_WIDGET_DATA,
       "payload": {
@@ -71,7 +71,7 @@ const Toolbar = ({eventFromWidget}) => {
   };
 
   const onChangeDataSame = (e) => {
-    console.log('onChangeDataSame')
+    //console.log('onChangeDataSame')
     var r = {
       "type": CHANGE_WIDGET_DATA,
       "payload": {
@@ -89,8 +89,8 @@ const Toolbar = ({eventFromWidget}) => {
     <div style={{background:'#e6e6e6',height:'40px',display:'flex',flexDirection:'rows',justifyContent:'space-between'}}>
       <div style={{padding:'10px 0 0 10px'}}>Dashboard</div>
       <div style={{padding:'5px 0 5px 0',display:'flex',flexDirection:'row'}}>
-      <button onClick={onLoadWidgetsSmallDif} style={{width:'100px',margin:'0 0 0 10px',fontSize:'11px',background:'gray',color:'white'}} >Load Widgets Small Diff</button>
-      <button onClick={onLoadWidgets} style={{width:'100px',margin:'0 0 0 10px',fontSize:'11px',background:'gray',color:'white'}} >Load Widgets</button>
+        <button onClick={onLoadWidgetsSmallDif} style={{width:'100px',margin:'0 0 0 10px',fontSize:'11px',background:'gray',color:'white'}} >Load Widgets Small Diff</button>
+        <button onClick={onLoadWidgets} style={{width:'100px',margin:'0 0 0 10px',fontSize:'11px',background:'gray',color:'white'}} >Load Widgets</button>
         <button onClick={onLoadWidgets2} style={{width:'100px',margin:'0 0 0 10px',fontSize:'11px',background:'gray',color:'white'}} >Load Widgets2</button>
         <button onClick={onChangeTitleDifferent} style={{width:'180px',margin:'0 0 0 10px',fontSize:'11px',background:'gray',color:'white'}} >Change Title Different</button>
         <button onClick={onChangeTitleSame} style={{width:'180px',margin:'0 0 0 10px',fontSize:'11px',background:'gray',color:'white'}} >Change Title Same</button>

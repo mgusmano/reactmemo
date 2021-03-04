@@ -7,7 +7,7 @@ import './Widget.css';
 import _ from "lodash";
 
 const WidgetRoot = ({id, properties, widgetData, eventFromWidget}) => {
-  console.log('in ' + id + ' title: ' + properties.title);
+  console.log('WidgetRoot - id: ' + id + ' title: ' + properties.title);
 
   var active = ''
 
@@ -115,28 +115,8 @@ const WidgetRoot = ({id, properties, widgetData, eventFromWidget}) => {
   )
 }
 
-// function checkIfWidgetChanged(prevWidget, nextWidget) {
-//   console.log('checkIfWidgetChanged: ' + prevWidget.id)
-//   console.log('prev',prevWidget.properties)
-//   console.log('next', nextWidget.properties)
-//   var same = _.isEqual(prevWidget.properties, nextWidget.properties);
-//   if (same === true) {
-//     console.log(`widget ${prevWidget.id} will NOT redraw`)
-//   }
-//   else {
-//     console.log(`widget ${prevWidget.id} WILL redraw`)
-//   }
-//   return same
-// }
-// export const Widget = React.memo(WidgetRoot, checkIfWidgetChanged);
-
-//export const Widget = React.memo(WidgetRoot);
-
 function checkIfWidgetChanged(prevWidget, nextWidget) {
   console.log('checkIfWidgetChanged: ' + prevWidget.id)
-  //console.log('prev',prevWidget.properties)
-  //console.log('next', nextWidget.properties)
-
   var same = _.isEqual(prevWidget.id, nextWidget.id)
           && _.isEqual(prevWidget.properties, nextWidget.properties)
           && _.isEqual(prevWidget.widgetData, nextWidget.widgetData)
@@ -150,3 +130,4 @@ function checkIfWidgetChanged(prevWidget, nextWidget) {
   return same
 }
 export const Widget = React.memo(WidgetRoot, checkIfWidgetChanged);
+

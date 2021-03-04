@@ -7,22 +7,14 @@ const Absolute = () => {
   const GlobalContext = useGlobalContext();
 
   useEffect(() => {
-    console.log('useEffect: call GlobalContext.loadWidgets()')
-    GlobalContext.loadWidgets(window.widgets);
-  }, []);
-
-  // const initialize = useCallback(() => {
-  //   console.log('useEffect: call GlobalContext.loadWidgets()')
-  //   GlobalContext.loadWidgets(window.widgets);  
-  // }, []);
-  // useEffect(() => {
-  //   initialize();
-  // }, [initialize]);
+    //console.log('useEffect: call GlobalContext.loadWidgets()');
+    GlobalContext.loadWidgets(window.widgets);  
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const eventFromWidget = useCallback((event) => {
-    console.log('eventFromWidget: ', JSON.stringify(event));
+    //console.log('eventFromWidget: ', JSON.stringify(event));
     GlobalContext.eventFromWidgetDispatch(event);
-  },[]);
+  },[]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
 <>
@@ -30,7 +22,8 @@ const Absolute = () => {
     <div id='absolute' className='absolute' style={{overflow:'auto',width:'100%',height:'100%',flex:'1',position:'relative',border:'0px solid #73AD21',display: 'flex'}}>
     {GlobalContext.widgets !== null &&
       GlobalContext.widgets.map((widget, index) => {
-        console.log('GlobalContext.widgets.map',JSON.stringify(widget))
+        console.log('GlobalContext.widgets.map')
+        console.log(JSON.stringify(widget))
         return (
           <Widget
             key={index}
