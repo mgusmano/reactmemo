@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { useGlobalContext } from '../globalstate/GlobalStateProvider';
-import { Widget } from './Widget'
+import { Widget } from './Widget';
 import Toolbar from '../Toolbar';
 
 const Absolute = () => {
@@ -8,13 +8,21 @@ const Absolute = () => {
 
   useEffect(() => {
     console.log('useEffect: call GlobalContext.loadWidgets()')
-    GlobalContext.loadWidgets(window.widgets)
+    GlobalContext.loadWidgets(window.widgets);
   }, []);
 
-  const eventFromWidget = (event) => {
-    console.log('eventFromWidget: ', JSON.stringify(event))
-    GlobalContext.eventFromWidgetDispatch(event)
-  }
+  // const initialize = useCallback(() => {
+  //   console.log('useEffect: call GlobalContext.loadWidgets()')
+  //   GlobalContext.loadWidgets(window.widgets);  
+  // }, []);
+  // useEffect(() => {
+  //   initialize();
+  // }, [initialize]);
+
+  const eventFromWidget = useCallback((event) => {
+    console.log('eventFromWidget: ', JSON.stringify(event));
+    GlobalContext.eventFromWidgetDispatch(event);
+  },[]);
 
   return (
 <>

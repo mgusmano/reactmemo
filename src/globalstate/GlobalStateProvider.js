@@ -1,8 +1,9 @@
 import React, { createContext, useReducer, useContext } from 'react';
 import { GlobalStateReducer } from './GlobalStateReducer';
 import { RESIZE_WIDGET, ADD_WIDGET, CHANGE_WIDGET, CHANGE_WIDGET_TITLE, CHANGE_WIDGET_DATA, LOAD_WIDGETS } from './GlobalStateTypes';
-import '../data/widgets'
-import '../data/widgets2'
+import '../data/widgets';
+import '../data/widgets2';
+import '../data/widgetssmalldif';
 
 const GlobalContext = createContext();
 
